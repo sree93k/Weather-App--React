@@ -77,6 +77,20 @@ const TempAndDetails = () => {
 
 
       </div>
+
+      <div className='flex flex-row items-center justify-center space-x-10 text-sm py-3'>
+                {
+                    horizontalDetails.map(({id,Icon,title,value})=>(
+                            <div key={id} className='flex flex-row items-center'>
+                                <Icon size={30}/>
+                                <p className='font-light ml-1'>
+                                {title} <span className='font-medium ml-1'>{value}</span>
+                                </p>
+                            </div>
+                    ))
+                }
+
+      </div>
    </div>
   )
 }
